@@ -4,6 +4,7 @@ module LoginHelper
     visit '/'
     click_link('Sign up')
     expect(current_path).to eq('/users/new')
+    puts page.body
     fill_in("user[name]", :with => "Amy Poehler")
     fill_in("user[height]", :with => "58")
     fill_in("user[happiness]", :with => "3")
